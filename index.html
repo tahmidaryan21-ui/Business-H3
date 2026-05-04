@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexcent - Final Professional Site</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- CSS Variables & Reset --- */
+        :root {
+            --primary: #4CAF50;
+            --secondary: #263238;
+            --text-dark: #4D4D4D;
+            --text-grey: #717171;
+            --silver: #F5F7FA;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        body { color: var(--text-dark); background: #fff; line-height: 1.6; }
+        
+        /* --- Navigation --- */
+        nav { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 15px 10%; background: #fff; position: sticky; top: 0; z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .logo { font-size: 24px; font-weight: bold; color: var(--secondary); text-decoration: none; }
+        .logo span { color: var(--primary); }
+        .nav-links { display: flex; list-style: none; }
+        .nav-links li { margin: 0 15px; }
+        .nav-links a { text-decoration: none; color: #18191F; font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
+
+        /* --- Buttons --- */
+        .btn { 
+            background: var(--primary); color: white; padding: 12px 25px; 
+            border-radius: 4px; text-decoration: none; display: inline-block; 
+            font-weight: 500; border: none; transition: 0.3s; cursor: pointer;
+        }
+        .btn:hover { background: #388E3C; transform: translateY(-2px); }
+
+        /* --- Sections Layout --- */
+        .section { padding: 80px 10%; }
+        .flex-container { display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
+        .content-box { flex: 1; min-width: 300px; }
+        .image-box { flex: 1; min-width: 300px; text-align: center; }
+        .image-box img { width: 100%; max-width: 450px; }
+
+        h1 { font-size: 50px; line-height: 1.2; margin-bottom: 20px; }
+        h1 span { color: var(--primary); }
+        p { color: var(--text-grey); margin-bottom: 30px; }
+
+        /* --- Statistics Section --- */
+        .stats-section { background: var(--silver); }
+        .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+        .stat-card { display: flex; align-items: center; gap: 15px; }
+        .stat-card h3 { font-size: 28px; color: var(--text-dark); }
+
+        /* --- Community/Card Grid --- */
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
+        .card { padding: 40px 25px; text-align: center; background: #fff; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+
+        /* --- Blog Cards --- */
+        .blog-card { position: relative; text-align: center; }
+        .blog-card img { width: 100%; border-radius: 8px; }
+        .blog-overlay { 
+            width: 85%; background: var(--silver); padding: 20px; 
+            margin: -60px auto 0; position: relative; border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* --- Footer --- */
+        footer { background: var(--secondary); color: #fff; padding: 60px 10%; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; }
+        .footer-col h4 { margin-bottom: 20px; font-size: 20px; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 10px; opacity: 0.7; }
+        .footer-input { 
+            padding: 12px; border-radius: 6px; border: none; width: 100%; 
+            background: rgba(255,255,255,0.1); color: white; margin-top: 10px; 
+        }
+
+        /* --- Mobile Responsive --- */
+        @media (max-width: 768px) {
+            nav .nav-links { display: none; }
+            .section { padding: 50px 5%; }
+            h1 { font-size: 32px; }
+            .image-box { order: -1; }
+            .stats-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <nav>
+        <a href="#" class="logo">Nex<span>cent</span></a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#feature">Feature</a></li>
+            <li><a href="#product">Product</a></li>
+        </ul>
+        <a href="https://google.com" target="_blank" class="btn" style="padding: 10px 20px;">Login</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="section stats-section">
+        <div class="flex-container">
+            <div class="content-box">
+                <h1>Lessons and insights <br><span>from 8 years</span></h1>
+                <p>Where to grow your business as a photographer: site or social media?</p>
+                <a href="https://google.com" target="_blank" class="btn">Register</a>
+            </div>
+            <div class="image-box">
+                <img src="https://undraw.co/api/illustrations/svg/undraw_landing_page_re_6xev" alt="Hero Illustration">
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="service" class="section">
+        <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+            <h2>Manage your entire community in a single system</h2>
+            <p>Who is Nexcent suitable for?</p>
+        </div>
+        <div class="grid-container">
+            <div class="card">
+                <h3>Membership Organisations</h3>
+                <p>Our software provides full automation of membership renewals and payments.</p>
+            </div>
+            <div class="card">
+                <h3>National Associations</h3>
+                <p>Helping you manage large scale associations across the country easily.</p>
+            </div>
+            <div class="card">
+                <h3>Clubs And Groups</h3>
+                <p>Perfect for managing local clubs and group activities efficiently.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="section stats-section">
+        <div class="flex-container">
+            <div class="content-box">
+                <h2>Helping a local <br><span style="color:var(--primary)">business reinvent itself</span></h2>
+                <p>We reached here with our hard work and dedication.</p>
+            </div>
+            <div class="content-box">
+                <div class="stats-grid">
+                    <div class="stat-card"><div><h3>2,245,341</h3><p>Members</p></div></div>
+                    <div class="stat-card"><div><h3>46,328</h3><p>Clubs</p></div></div>
+                    <div class="stat-card"><div><h3>828,867</h3><p>Events</p></div></div>
+                    <div class="stat-card"><div><h3>1,926,436</h3><p>Payments</p></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="feature" class="section">
+        <div style="text-align: center; margin-bottom: 50px;">
+            <h2>Caring is the new marketing</h2>
+            <p>The Nexcent blog is the best place to read about latest insights.</p>
+        </div>
+        <div class="grid-container">
+            <div class="blog-card">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80" alt="Blog 1">
+                <div class="blog-overlay">
+                    <h4>Creating Streamlined Safeguarding Processes</h4><br>
+                    <a href="https://google.com" style="color:var(--primary); text-decoration:none; font-weight:bold;">Read More →</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=400&q=80" alt="Blog 2">
+                <div class="blog-overlay">
+                    <h4>What are your safeguarding responsibilities?</h4><br>
+                    <a href="https://google.com" style="color:var(--primary); text-decoration:none; font-weight:bold;">Read More →</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=400&q=80" alt="Blog 3">
+                <div class="blog-overlay">
+                    <h4>Revamping the Membership Model with Triathlon</h4><br>
+                    <a href="https://google.com" style="color:var(--primary); text-decoration:none; font-weight:bold;">Read More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2 style="color:#fff">Nex<span>cent</span></h2>
+                <p style="margin-top:20px;">Copyright © 2026 Nexcent ltd.<br>All rights reserved.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul><li>About us</li><li>Blog</li><li>Contact us</li></ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul><li>Help center</li><li>Terms of service</li><li>Legal</li></ul>
+            </div>
+            <div class="footer-col">
+                <h4>Stay up to date</h4>
+                <input type="email" placeholder="Your email address" class="footer-input">
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
